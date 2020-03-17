@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>JavaScript Arrays</h1>
+        <p id="demo"></p>
+        <script>
+
+            // This is Arrays
+            var cars = ["saab", "volvo", 123 ,"bwn", 345, "honda"];
+            var person1 = ["Nam", "Le", 28];
+
+            cars[3] = "678"
+
+            // This is Object
+            var person2 = {
+                firstName : "Nam",
+                lastName : "Le",
+                age : "28"
+            };
+
+            // Arrays use numbers to access its "elements"    
+            document.getElementById('demo').innerHTML = cars;
+            document.getElementById('demo').innerHTML = typeof cars;
+
+            // Objects use names to access its "members" 
+            document.getElementById('demo').innerHTML = person2.firstName;
+
+        </script>
+    </body>
+</html>
