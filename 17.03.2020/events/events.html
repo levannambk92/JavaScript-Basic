@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Button</h1>
+        <button id="demo">Click me</button>
+
+        <p id="text">This is paragragh</p>
+
+        <script>
+            function changeSize() {
+                document.getElementById('text').style.fontSize = '30px';
+            }
+            function changeColor() {
+                document.getElementById('text').style.color = 'green';
+            }
+            function changeBorder() {
+                document.getElementById('text').style.border = '5px solid orange';
+            }
+
+        // Use this way, it can not add 2 function when click button. JavaScript just take the last call.
+            document.getElementById('demo').onclick = changeSize;
+            document.getElementById('demo').onclick = changeColor;
+
+        // Call 3 function by using addEventListener :
+            document.getElementById('demo').addEventListener('click', changeColor);
+            document.getElementById('demo').addEventListener('click', changeSize);
+            document.getElementById('demo').addEventListener('click', changeBorder);
+
+        </script>
+    </body>
+</html>
